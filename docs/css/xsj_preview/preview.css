@@ -387,5 +387,8 @@ table tbody td.highlighted{
       scroll-padding-bottom: initial!important;
       scroll-padding-left: initial!important;
     }
+    .preview>.xsj_heading:hover:before{
+      display: none;
+    }
 }
 
