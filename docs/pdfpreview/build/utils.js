@@ -1,3 +1,4 @@
+import * as pdfjsLib from './pdf.js'
 
 const getIntoPxFn = ()=> {
   const temp = document.createElement('div')
@@ -14,7 +15,23 @@ const getIntoPxFn = ()=> {
 
 // 必须在 host 状态下运行，也就是有 document 这个对像
 const generateCoverFn = async (url)=> {
-  const pdfDocTask = pdfjsLib.getDocument(url)
+  pdfjsLib.GlobalWorkerOptions.workerSrc = './build/pdf.worker.js';
+  const cMapUrl = "../web/cmaps/"
+  //cMapUrl =  'https://cdn.jsdelivr.net/npm/pdfjs-dist@3.2.146/cmaps/'
+  const standardFontDataUrl = "../web/standard_fonts/"
+  //standardFontDataUrl = 'https://cdn.jsdelivr.net/npm/pdfjs-dist@3.2.146/standard_fonts/'
+  const useWorkerFetch = true
+  console.log('useWorkerFetch:', useWorkerFetch)
+  const docConfig = {
+    url: url,
+    useWorkerFetch: useWorkerFetch,
+    "cMapPacked": true,
+    "cMapUrl": cMapUrl,
+    "standardFontDataUrl": standardFontDataUrl,
+    "useSystemFonts": true,
+    "verbosity": 1,
+  }
+  const pdfDocTask = pdfjsLib.getDocument(docConfig)
   const pdfDoc = await pdfDocTask.promise
   const page = await pdfDoc.getPage(1)
   const intoPx = getIntoPxFn() || 96

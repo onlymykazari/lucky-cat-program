@@ -1323,9 +1323,10 @@ a.attachment{
     min-width: 250px;
 }
 a.attachment i.fa{
-    font-size: 3em;
+  font-size: 3em;
   float: left;
   margin-right: 0.2em;
+  margin-left: 0;
 }
 a.attachment .filename{
     vertical-align: top;

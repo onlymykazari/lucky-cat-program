@@ -8,6 +8,7 @@ renderNumberedHeading: true
 grammar_code: true
 grammar_decorate: true
 grammar_mathjax: true
+grammar_nunjucks: false
 color: 'var(--base09)'
 emoji: "\uD83D\uDCAF"
 cover: '![](./img/update_cover.jpg)'
@@ -34,7 +35,7 @@ idiom: '海阔凭鱼跃，天高任鸟飞'
 [Just-One-Page-PDF](https://chromewebstore.google.com/detail/just-one-page-pdf/fgbhbfdgdlojklkbhdoilkdlomoilbpl) 一款强大的 HTML 转 PDF 浏览器插件．小书匠会员用户支持解锁 JOPP 所有功能，具体使用教程可以查看[这里](https://soft.xiaoshujiang.com/blog/chrome/just_one_page_pdf_integration)．
 
 
-<!-- {#foldnextline} -->
+<!-- {#foldnextline#} -->
 # 小书匠会员
 
 ## 收费与不收费的区别
@@ -88,7 +89,98 @@ ___
 > Support/storywriter/ Linux: ~/.config/storywriter 
 > ```
 
-<!-- {#newestUpdate}-->
+<!-- {#newestUpdate#}-->
+
+## 8.16.0
+
+
+## 8.16.0 新功能
+
+1. markdown 语法识别上下角标
+2. 立时预览下，支持上下角标样式显示
+
+
+### 8.16.0 修改
+
+3. 避免附件组件语法冲突
+
+
+<!--{#newestUpdateEnd#}-->
+
+
+## 8.15.14
+
+### 8.15.14 新功能
+
+1. 右键上下文菜单支持插入附件
+2. 选中单行内的文字后，弹出的功能框添加加粗，斜体等格式按钮
+3. 选中单行内的文字后，允许选择更多自定义的颜色
+4. mermaid 图片支持在立时预览里点击放大
+
+### 8.15.14 修改
+
+1. 修复编辑器内搜索列表结果不能控制开关的问题
+2. 修复工具栏里的颜色选择器上下文菜单定位不准确问题
+3. 调整颜色选择器样式
+4. 更新 mermaid 到 11.15.0
+
+## 8.15.13
+
+### 8.15.13 修改
+
+1. 图片编辑输入文字时，避免文字闪烁
+2. 记住图片编辑选择的状态
+
+## 8.15.12
+
+### 8.15.12 修改
+
+1. 修复图片编辑文字时不能保存的问题
+
+## 8.15.11
+
+### 8.15.11 新功能
+
+1. 支持直接打开修改纯文本的附件组件
+2. 支持附件组件不同的扩展名显示不同的图标
+
+### 8.15.11 修改
+
+1. 修正中文 data: 时，编码错误的问题
+2. 调整预览附件显示名称提示内容
+3. 图片编辑器添加文字描边效果
+4. 文章列表样式调整
+5. 图片查看器样式调整
+6. 升级图片编辑器版本
+
+<!--{#newestUpdateEnd#}-->
+
+
+## 8.15.10
+
+### 8.15.10 修改
+
+1. 修复 pdf 预览图片未正确生成的问题
+
+## 8.15.9
+
+### 8.15.9 修改
+
+1. 升级 pdf.js 到5.7 版本，改进 pdf 显示性能
+
+## 8.15.7
+
+### 8.15.7 修改
+
+1. 小书匠预览区渲染引擎冲突 #1778
+2. 添加重新生成 pdf 封面按钮
+3. 解决 pdf 预览对中文无法正常显示的问题
+
+## 8.15.6
+
+### 8.15.6 修改
+
+1. 编辑区打字机音量支持通过右键细调声音大小 #1776
 
 ## 8.15.5
 
@@ -98,8 +190,6 @@ ___
 2. 解决静态部署版本无法批量导入的问题
 3. 忽略 svg 里的超链接
 4. 修复思维导图渲染出错的问题 #1774
-
-<!--{#newestUpdateEnd}-->
 
 
 ## 8.15.4

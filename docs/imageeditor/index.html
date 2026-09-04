@@ -127,10 +127,14 @@
                 <span class="icon_tip">缩小图片</span>
                 <i class="icon search minus"></i>
               </div>
-              <div class="ui pointing dropdown button link zoom_level_dropdown" title="缩放">
+              <div class="ui pointing left top search dropdown button link zoom_level_dropdown" title="缩放">
                 <span class="text">100%</span>
                 <i class="dropdown icon"></i>
                 <div class="menu">
+                  <div class="item" data-value="fitPage">适合页面</div>
+                  <div class="item" data-value="fitPageHeight">适合高度</div>
+                  <div class="item" data-value="fitPageWidth">适合宽度</div>
+                  <div class="divider"></div>
                   <div class="item" data-value="0.2"><span style="visibility:hidden">0</span>20%</div>
                   <div class="item" data-value="0.4"><span style="visibility:hidden">0</span>40%</div>
                   <div class="item" data-value="0.6"><span style="visibility:hidden">0</span>60%</div>
@@ -237,5 +241,10 @@
     <script src="./js/spectrum-colorpicker-1.8.0.js"></script>
     <script src="./js/literallycanvas-core.js"></script>
     <script src="./js/main.bundle.js"></script>
+    <div class="ui dimmer inverted">
+      <div class="content">
+        <div class="ui text loader">Loading</div>
+      </div>
+    </div>
   </body>
 </html>
